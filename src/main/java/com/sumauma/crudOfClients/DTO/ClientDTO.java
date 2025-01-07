@@ -12,13 +12,13 @@ public class ClientDTO {
 
 	private Long id;
 
-	@NotBlank(message = "não pode ser nulo")
+	@NotBlank(message = "Não pode ser vazio")
 	private String name;
 	
 	private String cpf;
 	private Double income;
 
-	@PastOrPresent(message = "Datas não podem ser futuras")
+	@PastOrPresent(message = "Não pode ser data futura")
 	private LocalDate birthDate;
 	private Integer children;
 	

@@ -38,7 +38,6 @@ public class CleintController {
 	public ResponseEntity<Page<ClientDTO>> findAll(Pageable pageable) {
 		Page<ClientDTO> clientDto = clientService.findAll(pageable);
 		return ResponseEntity.ok(clientDto);
-				
 	}
 	
 	@PostMapping
@@ -52,14 +51,12 @@ public class CleintController {
 	public ResponseEntity<ClientDTO> update(@PathVariable Long id, @Valid @RequestBody ClientDTO clientDto) {
 		clientDto = clientService.update(id, clientDto);
 		return ResponseEntity.ok(clientDto);
-				
 	}
 
 	@DeleteMapping(value = "/{id}")
-	public ResponseEntity<Void> update(@PathVariable Long id) {
+	public ResponseEntity<Void> delete(@PathVariable Long id) {
 		clientService.delete(id);
 		return ResponseEntity.noContent().build();
-				
 	}
 	
 	
